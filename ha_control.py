@@ -11,7 +11,21 @@ def press(keys):
     combo = keys.split("+")
     pyautogui.hotkey(*combo)
     return f"Pressed {keys}"
-
+    
+@app.route("/pressmore/<keys>")
+def press(keys):
+    # Example: keys = "ctrl+s" or "alt+f4"
+    combo = keys.split("+")
+   # Press the 'a' key down
+    pyautogui.keyDown(*combo)
+    
+    # Wait for half a second
+    time.sleep(0.5)
+    
+    # Release the 'a' key
+    pyautogui.keyUp(*combo)
+    return f"Pressed {keys}"
+    
 @app.route("/start_gspro")
 def open_gspro():
     pyautogui.hotkey("win", "r")
@@ -24,6 +38,7 @@ def open_gspro():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
 
 
 

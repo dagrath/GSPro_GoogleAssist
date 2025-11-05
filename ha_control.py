@@ -20,18 +20,10 @@ def open_gspro():
     pyautogui.hotkey("win","r")
     pyautogui.write("C:\\GSPro\\GSPro_Skytrak_1.98\\GSProDeviceInterface.exe\n")
     return "Running"
-
-@app.route("/update_scripts")
-def update_scripts():
-    pyautogui.hotkey("win","r")
-    pyautogui.write("C:\\GolfSimScripts\\update_scripts.bat\n")
-    time.sleep(1)
-    sys.exit()
-
-    return "Updated Scripts"
     
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
 
 

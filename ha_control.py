@@ -13,7 +13,7 @@ def press(keys):
     return f"Pressed {keys}"
     
 @app.route("/pressmore/<keys>")
-def press(keys):
+def pressmore(keys):
     # Example: keys = "ctrl+s" or "alt+f4"
     combo = keys.split("+")
    # Press the 'a' key down
@@ -38,6 +38,7 @@ def open_gspro():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
 
 
 

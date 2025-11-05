@@ -27,8 +27,9 @@ def update_scripts():
     time.sleep(1)
     exit()
 
-    return "No"
+    return "Updated Scripts"
     
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+

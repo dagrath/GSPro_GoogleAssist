@@ -1,6 +1,7 @@
 from flask import Flask
 import pyautogui
 import time
+import sys
 
 app = Flask(__name__)
 
@@ -25,11 +26,12 @@ def update_scripts():
     pyautogui.hotkey("win","r")
     pyautogui.write("C:\\GolfSimScripts\\update_scripts.bat\n")
     time.sleep(1)
-    exit()
+    sys.exit()
 
     return "Updated Scripts"
     
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+
 

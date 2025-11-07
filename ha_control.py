@@ -20,7 +20,7 @@ def pressmore(keys):
     pyautogui.keyDown(*combo)
     
     # Wait for half a second
-    time.sleep(0.5)
+    time.sleep(0.4)
     
     # Release the 'a' key
     pyautogui.keyUp(*combo)
